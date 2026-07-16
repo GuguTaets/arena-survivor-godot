@@ -1,2 +1,7 @@
-# arena-survivor-godot
-Um pequeno jogo de sobrevivência de arena 2D feito com Godot e GDScript.
+# Arena Survivor
+
+A small 2D arena survival game built with Godot and GDScript.
+
+## Status
+
+Early development.
