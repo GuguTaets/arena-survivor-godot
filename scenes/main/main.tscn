@@ -1,18 +1,7 @@
 [gd_scene format=3 uid="uid://ccjf2a33tstol"]
 
-[ext_resource type="PackedScene" uid="uid://xjcrq1m45esg" path="res://scenes/bola/node_2d.tscn" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://dgurdn4lw7iln" path="res://scenes/node_2d.tscn" id="1_hyk8p"]
 
 [node name="Main" type="Node2D" unique_id=1339737354]
 
-[node name="Label" type="Label" parent="." unique_id=454803476]
-offset_right = 114.0
-offset_bottom = 23.0
-text = "\"Hello, World!\""
-
-[node name="Node2D" parent="." unique_id=697008184 instance=ExtResource("1_hyk8p")]
-position = Vector2(254, 91)
-gravity_scale = 0.028
-
-[node name="Node2D2" parent="." unique_id=1148496989 instance=ExtResource("1_hyk8p")]
-position = Vector2(869, 103)
-gravity_scale = 0.116
+[node name="Node2D" parent="." unique_id=670550592 instance=ExtResource("1_hyk8p")]
