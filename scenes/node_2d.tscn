@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dgurdn4lw7iln"]
+
+[ext_resource type="PackedScene" uid="uid://xjcrq1m45esg" path="res://scenes/bola/node_2d.tscn" id="1_6e84v"]
+
+[node name="Node2D" type="Node2D" unique_id=670550592]
+
+[node name="Node2D" parent="." unique_id=1748744341 instance=ExtResource("1_6e84v")]
+position = Vector2(500, 258)
+
+[node name="Timer" type="Timer" parent="Node2D" unique_id=246550903]
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1829386749]
+anchors_preset = -1
+anchor_left = -0.67200005
+anchor_bottom = 0.201
+offset_left = -562.86523
+offset_top = 5100.438
+offset_right = 6288.2124
+offset_bottom = 8103.791
+
+[node name="Button" type="Button" parent="." unique_id=192056221]
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 191.0
+offset_bottom = 53.0
+text = "Toggle Motion"
+
+[connection signal="pressed" from="Button" to="Node2D" method="_on_button_pressed"]

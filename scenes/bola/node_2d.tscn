@@ -3,14 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bc08ulsar48hy" path="res://assets/sprites/Beach_Ball_PNG_Clipart-1509166503.png" id="1_b4sc5"]
 [ext_resource type="Script" uid="uid://ctfqg7eysaxli" path="res://scenes/bola/Node2D.gd" id="1_f8xjq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
-
-[node name="Node2D" type="StaticBody2D" unique_id=1748744341]
-script = ExtResource("1_f8xjq")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1332322051]
-scale = Vector2(0.015, 0.015)
+[node name="Node2D" type="Sprite2D" unique_id=847372528]
+scale = Vector2(0.014312496, 0.014312496)
 texture = ExtResource("1_b4sc5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521732954]
-shape = SubResource("CircleShape2D_g4v7s")
+script = ExtResource("1_f8xjq")
