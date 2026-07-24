@@ -1,13 +1,21 @@
 extends Node2D
 
+signal encostou
+
 @onready var timer = get_node("Timer")
 @onready var label = $Label
-
 var speed = 400
+
+
+
 
 func _ready():
 	print("Cena carregada!")
 	set_process(is_processing())
+
+
+
+
 
 func _process(delta):
 	var direction = Vector2.ZERO
@@ -25,6 +33,12 @@ func _process(delta):
 	direction = direction.normalized()
 	position += direction * speed * delta
 
+	if (global_position.x >= 380 and global_position.x <= 1000) and (global_position.y):
+		encostou.emit()
+
+
+
+
 func _input(event):
 	# O _input continua rodando mesmo com o _process desligado.
 	# Se o _process está ativo, o movimento funciona normal e não avisamos nada.
@@ -33,6 +47,9 @@ func _input(event):
 
 	if event.is_pressed() and not event.is_echo():
 		print("Controles desativados! Aguarde alguns instantes.")
+
+
+		
 
 
 func _on_button_pressed():
@@ -45,7 +62,18 @@ func _on_button_pressed():
 	timer.timeout.connect(_on_timer_timeout)
 
 
+
+
+
+
 func _on_timer_timeout():
 	print("Tempo esgotado!")
 	set_process(not is_processing())
 	visible = not visible
+
+
+
+
+
+func _on_encostou():
+	print("Encostou")

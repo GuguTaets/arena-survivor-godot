@@ -5,7 +5,7 @@
 [node name="Node2D" type="Node2D" unique_id=670550592]
 
 [node name="Node2D" parent="." unique_id=1748744341 instance=ExtResource("1_6e84v")]
-position = Vector2(500, 258)
+position = Vector2(120.00003, 452)
 
 [node name="Timer" type="Timer" parent="Node2D" unique_id=246550903]
 
@@ -25,4 +25,5 @@ offset_right = 191.0
 offset_bottom = 53.0
 text = "Toggle Motion"
 
+[connection signal="encostou" from="Node2D" to="Node2D" method="_on_encostou"]
 [connection signal="pressed" from="Button" to="Node2D" method="_on_button_pressed"]
