@@ -1,5 +1,7 @@
 extends Area2D
 
+signal hit
+
 @export var speed = 400 #pixels/sec
 var screen_size # Size of the game Window
 
@@ -31,3 +33,15 @@ func _update_animation(direction: Vector2) -> void:
 		sprite.play("walk-right")
 	else:
 		sprite.play("walk-down" if direction.y > 0 else "walk-up")
+
+
+func _on_body_entered(body: Node2D) -> void:
+	hide()
+	hit.emit()
+	$CollisionShape2D.set_deferred("disabled", true)
+
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
